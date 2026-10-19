@@ -31,7 +31,17 @@ def test_root_redirects_to_static_index(client):
 
 def test_get_activities_returns_all_activities(client):
     # Arrange
-    expected_activity_names = {"Chess Club", "Programming Class", "Gym Class"}
+    expected_activity_names = {
+        "Chess Club",
+        "Programming Class",
+        "Gym Class",
+        "Soccer Team",
+        "Basketball Team",
+        "Drama Club",
+        "Art Workshop",
+        "Debate Club",
+        "Science Olympiad",
+    }
 
     # Act
     response = client.get("/activities")
